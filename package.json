@@ -5,7 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "prettier": "prettier '/*.js'",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "dependencies": {
     "expo": "~42.0.1",
@@ -21,13 +23,20 @@
     "@babel/core": "^7.9.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-native": "^3.11.0",
     "prettier": "^2.3.2"
   },
-  "private": true
+  "private": true,
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "semi": false,
+    "singleQuote": true
+  }
 }
