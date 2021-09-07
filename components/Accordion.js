@@ -4,7 +4,7 @@ import { useTheme } from '@react-navigation/native'
 
 import Icon from './Icon'
 
-const Accordian = (props) => {
+const Accordion = (props) => {
   const [expand, setExpand] = useState(false)
   const { colors } = useTheme()
   return (
@@ -82,10 +82,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  accordianContent: {
+  AccordionContent: {
     justifyContent: 'center',
     alignItems: 'center',
   },
 })
 
-export default Accordian
+export default Accordion
