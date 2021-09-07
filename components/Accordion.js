@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 
@@ -52,6 +53,7 @@ const Accordion = (props) => {
             styles.accordionContent,
             {
               ...props.accordionStyle,
+              backgroundColor: props.backgroundColor || colors.background,
               borderWidth: props.accordionBorderWidth || colors.borderWidth,
               borderColor: props.accordionBorderColor || colors.borderColor,
             },
@@ -61,6 +63,18 @@ const Accordion = (props) => {
       ) : null}
     </View>
   )
+}
+
+Accordion.propTypes = {
+  elevation: PropTypes.number,
+  round: PropTypes.number,
+  backgroundColor: PropTypes.string,
+  borderRadius: PropTypes.number,
+  label: PropTypes.string,
+  accordionStyle: PropTypes.object,
+  accordionBorderWidth: PropTypes.number,
+  accordionBorderColor: PropTypes.string,
+  component: PropTypes.element,
 }
 
 const styles = StyleSheet.create({
@@ -82,7 +96,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  AccordionContent: {
+  accordionContent: {
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -1,10 +1,10 @@
 const Theme = {
   dark: false,
   colors: {
-    round: 0,
+    round: 5,
     elevation: 5,
     fontSize: 15,
-    borderWidth: 0.25,
+    borderWidth: 0.5,
     headerFontSize: 18,
     borderColor: '#122C34',
     primary: '#122C34',

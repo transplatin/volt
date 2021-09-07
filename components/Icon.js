@@ -1,5 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
+import PropTypes from 'prop-types'
 import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '@react-navigation/native'
 
@@ -21,4 +22,11 @@ const Icon = (props) => {
     </View>
   )
 }
+
+Icon.propTypes = {
+  name: PropTypes.string,
+  size: PropTypes.number,
+  color: PropTypes.string,
+}
+
 export default Icon
