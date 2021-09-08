@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Theme from './Theme.js'
+import { useTheme } from '@react-navigation/native'
 
 // works on android, ios and web
 export const SwitchButton = (props) => {
+	const { colors } = useTheme()
+
 	const [isEnabled, setIsEnabled] = useState(false)
 	const toggleSwitch = () => setIsEnabled((previousState) => !previousState)
 
@@ -11,19 +13,19 @@ export const SwitchButton = (props) => {
 		<Switch
 			style={styles.switchButton}
 			trackColor={{
-				false: props.disabledColor || Theme.colors.warning,
-				true: props.enabledColor || Theme.colors.success,
+				false: props.disabledColor || colors.warning,
+				true: props.enabledColor || colors.success,
 			}}
 			thumbColor={
 				isEnabled
 					? props.enabledColor
 						? props.enabledColor
-						: Theme.colors.success
+						: colors.success
 					: props.disabledColor
 					? props.disabledColor
-					: Theme.colors.warning
+					: colors.warning
 			}
-			ios_backgroundColor={props.ios_backgroundColor || Theme.colors.warning}
+			ios_backgroundColor={props.ios_backgroundColor || colors.warning}
 			onValueChange={toggleSwitch}
 			value={isEnabled}
 		/>

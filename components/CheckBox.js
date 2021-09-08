@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Theme from './Theme.js'
+import { useTheme } from '@react-navigation/native'
 import Checkbox from 'expo-checkbox'
 
 // support for android, and web only
 const CheckBox = (props) => {
+	const { colors } = useTheme()
+
 	const [isChecked, setChecked] = useState(false)
 	return (
 		<Checkbox
@@ -12,11 +14,7 @@ const CheckBox = (props) => {
 			style={styles.checkbox}
 			disabled={props.disabled}
 			color={
-				isChecked
-					? props.color
-						? props.color
-						: Theme.colors.primary
-					: undefined
+				isChecked ? (props.color ? props.color : colors.primary) : undefined
 			}
 			onChange={props.onChange}
 			onValueChange={setChecked}
