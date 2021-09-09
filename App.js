@@ -2,65 +2,37 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import Theme from './components/Theme'
 import Home from './screens/Home'
-import BottomNav from './navigation/BottomNav'
-import Icon from './components/Icon'
+import BottomNav from './navigation/StackNav'
 
 const screens = [
   {
     name: 'Home',
     component: Home,
-    options: {
-      tabBarLabel: 'Home',
-      tabBarIcon: ({ focused, color, size }) => {
-        const iconName = 'md-home'
-        // You can return any component that you like here!
-        return <Icon name={iconName} size={size} color={color} />
-      },
-    },
+    options: {},
   },
   {
     name: 'Analytics',
     component: Home,
     options: {
-      tabBarIcon: ({ focused, color, size }) => {
-        const iconName = 'analytics'
-        // You can return any component that you like here!
-        return <Icon name={iconName} size={size} color={color} />
+      headerStyle: {
+        backgroundColor: 'red',
       },
     },
   },
   {
     name: 'Cart',
     component: Home,
-    options: {
-      tabBarIcon: ({ focused, color, size }) => {
-        const iconName = 'basket'
-        // You can return any component that you like here!
-        return <Icon name={iconName} size={size} color={color} />
-      },
-    },
+    options: {},
   },
   {
     name: 'Save',
     component: Home,
-    options: {
-      tabBarIcon: ({ focused, color, size }) => {
-        const iconName = 'bookmark'
-        // You can return any component that you like here!
-        return <Icon name={iconName} size={size} color={color} />
-      },
-    },
+    options: {},
   },
   {
     name: 'Settings',
     component: Home,
-    options: {
-      tabBarIcon: ({ focused, color, size }) => {
-        const iconName = 'md-settings'
-        // You can return any component that you like here!
-        return <Icon name={iconName} size={size} color={color} />
-      },
-    },
+    options: {},
   },
 ]
 
