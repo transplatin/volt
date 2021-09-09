@@ -2,7 +2,7 @@ import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { Dimensions } from 'react-native'
 import { useTheme } from '@react-navigation/native'
-import Home from '../screens/Home'
+import Home from '../screens/testComponent'
 
 const Drawer = createDrawerNavigator()
 
