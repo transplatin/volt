@@ -5,7 +5,7 @@ import { useTheme } from '@react-navigation/native'
 import Checkbox from 'expo-checkbox'
 
 // support for android, and web only
-const CheckBox = (props) => {
+const CheckboxComponent = (props) => {
 	const { colors } = useTheme()
 
 	const [isChecked, setChecked] = useState(false)
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
 	},
 })
 
-export default CheckBox
+export default CheckboxComponent
