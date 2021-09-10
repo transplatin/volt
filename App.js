@@ -2,6 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import Theme from './components/Theme'
 import Home from './screens/Home'
+import StackNav from './navigation/StackNav'
 import Modal from './screens/Modal'
 
 const screens = [
