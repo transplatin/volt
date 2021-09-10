@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import Checkbox from 'expo-checkbox'
 
@@ -13,9 +14,7 @@ const CheckBox = (props) => {
 			value={isChecked}
 			style={styles.checkbox}
 			disabled={props.disabled}
-			color={
-				isChecked ? (props.color ? props.color : colors.primary) : undefined
-			}
+			color={isChecked ? props.color || colors.primary : undefined}
 			onChange={props.onChange}
 			onValueChange={setChecked}
 		/>
