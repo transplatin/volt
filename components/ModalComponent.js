@@ -7,14 +7,18 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native'
+import { useTheme } from '@react-navigation/native'
+import PropTypes from 'prop-types'
 
-export default function ModalComponent() {
+export default function ModalComponent(props) {
   const [modalVisible, setModalVisible] = useState(false)
+  const { colors } = useTheme()
+
   return (
     <View style={styles.centeredView}>
       <Modal
-        animationType="slide"
-        transparent={true}
+        animationType={props.animationType || 'slide'}
+        transparent={props.transparent || true}
         visible={modalVisible}
         onRequestClose={() => {
           Alert.alert('Modal has been closed.')
@@ -24,7 +28,7 @@ export default function ModalComponent() {
             <Text style={styles.modalText}>Hello World!</Text>
 
             <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
+              style={{ ...styles.openButton, backgroundColor: colors.success }}
               onPress={() => {
                 setModalVisible(!modalVisible)
               }}>
@@ -43,6 +47,11 @@ export default function ModalComponent() {
       </TouchableHighlight>
     </View>
   )
+}
+
+ModalComponent.propTypes = {
+  animationType: PropTypes.oneOf('none', 'slide', 'fade'),
+  transparent: PropTypes.bool,
 }
 
 const styles = StyleSheet.create({
