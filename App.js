@@ -1,19 +1,14 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import Theme from './components/Theme'
-import Home from './screens/Home'
-import StackNav from './navigation/StackNav'
+import Home from './screens/testComponent'
+import DrawerNav from './navigation/DrawerNav'
 import Modal from './screens/Modal'
 
 const screens = [
   {
     name: 'Home',
     component: Home,
-    options: {},
-  },
-  {
-    name: 'Modal',
-    component: Modal,
     options: {},
   },
   {
@@ -45,7 +40,7 @@ const screens = [
 export default function App() {
   return (
     <NavigationContainer theme={Theme}>
-      <StackNav
+      <DrawerNav
         screenOptions={{
           headerShown: true,
         }}
