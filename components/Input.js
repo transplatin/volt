@@ -11,6 +11,7 @@ const Input = (props) => {
         styles.container,
         {
           ...props.style,
+          margin: props.margin || colors.margin,
           elevation: props.elevation || colors.elevation,
           borderRadius: props.round || colors.round,
           borderWidth: props.borderWidth || colors.borderWidth,
@@ -20,7 +21,7 @@ const Input = (props) => {
         },
         props.multiline && { height: 60 + 40 * props.numberOfLines },
       ]}>
-      {props.value.length > 0 ? (
+      {props.value && props.value.length > 0 ? (
         <View
           style={[
             styles.label,
@@ -54,6 +55,7 @@ const Input = (props) => {
         multiline={props.multiline}
         numberOfLines={props.numberOfLines}
         onEndEditing={props.onEnd}
+        editable={props.disable ? !props.disable : props.disable}
         secureTextEntry={props.secure}
         onChangeText={(e) => props.setInput(e)}
       />
@@ -65,6 +67,7 @@ Input.propTypes = {
   style: PropTypes.object,
   elevation: PropTypes.number,
   round: PropTypes.number,
+  margin: PropTypes.number,
   borderWidth: PropTypes.number,
   borderColor: PropTypes.string,
   value: PropTypes.string,
@@ -76,6 +79,7 @@ Input.propTypes = {
   multiline: PropTypes.bool,
   width: PropTypes.string,
   numberOfLines: PropTypes.number,
+  disable: PropTypes.bool,
 }
 
 const styles = StyleSheet.create({

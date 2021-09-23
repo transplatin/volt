@@ -16,6 +16,7 @@ const Button = (props) => {
           elevation: props.elevation || colors.elevation,
           borderWidth: props.borderWidth || colors.borderWidth,
           borderColor: props.borderColor || colors.borderColor,
+          margin: props.margin || colors.margin,
         },
       ]}
       onPress={props.onPress}>
@@ -35,6 +36,7 @@ const Button = (props) => {
 
 Button.propTypes = {
   style: PropTypes.object,
+  margin: PropTypes.number,
   backgroundColor: PropTypes.string,
   round: PropTypes.number,
   elevation: PropTypes.number,
