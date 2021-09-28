@@ -4,7 +4,7 @@ const Theme = {
     round: 15,
     elevation: 10,
     fontSize: 14,
-    borderWidth: 0.25,
+    borderWidth: 1,
     margin: 25,
     headerFontSize: 20,
     borderColor: '#14a5ff',
