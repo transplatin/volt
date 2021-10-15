@@ -4,7 +4,7 @@
 **Volt-UI is based on Expo and React Navigation. Read more about [Expo](https://docs.expo.dev/) and [react-navigation](https://reactnavigation.org/docs/getting-started/)**
 
 ## Installation
-Make sure you have expo cli isntalled in your machine
+Make sure you have expo cli installed in your machine
 ```sh 
 # install the command lines
 $ npm install --global expo-cli 

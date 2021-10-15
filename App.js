@@ -1,21 +1,67 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import Theme from './theme/Theme'
+// import Home from './screens/Home'
+import Home from './Screens/Home'
+import StackNav from './navigation/DrawerNav'
+import Icon from './components/Icon/Icon'
+
+const screens = [
+  {
+    name: 'Home',
+    component: Home,
+    options: {
+      title: 'Dashboard',
+      headerShown: true,
+      drawerIcon: (focused, size) => (
+        <Icon name="home" size={20} family="AntDesign" />
+      ),
+    },
+  },
+  {
+    name: 'Services',
+    component: Home,
+    options: {
+      title: 'Services',
+      headerShown: true,
+      drawerIcon: (focused, size) => (
+        <Icon name="lock" size={20} family="AntDesign" />
+      ),
+    },
+  },
+  {
+    name: 'Analytics',
+    component: Home,
+    options: {
+      title: 'Analytics',
+      headerShown: true,
+      drawerIcon: (focused, size) => (
+        <Icon name="home" size={18} family="AntDesign" />
+      ),
+    },
+  },
+  {
+    name: 'Data',
+    component: Home,
+    options: {
+      title: 'Data',
+      headerShown: true,
+      drawerIcon: (focused, size) => (
+        <Icon name="database" size={18} family="AntDesign" />
+      ),
+    },
+  },
+]
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer theme={Theme}>
+      <StackNav
+        screenOptions={{
+          headerShown: true,
+        }}
+        screens={screens}
+      />
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
