@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useTheme } from '@react-navigation/native'
+import { StyleSheet, View, Switch } from 'react-native'
 
 // works on android, ios and web
 export const SwitchButton = (props) => {
@@ -43,3 +44,5 @@ const styles = StyleSheet.create({
 		margin: 0,
 	},
 })
+
+export default SwitchButton
