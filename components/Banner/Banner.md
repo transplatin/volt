@@ -1,5 +1,5 @@
 # BANNER
-
+Banner to display prominent actions and related optional actions
 
 # Props
 
