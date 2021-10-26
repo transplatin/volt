@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 
-import Icon from './Icon'
+import Icon from '../Icon/Icon'
 
 const Accordion = (props) => {
   const [expand, setExpand] = useState(false)

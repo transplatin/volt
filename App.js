@@ -1,10 +1,9 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import Theme from './theme/Theme'
+import Theme from './Theme/Theme'
 // import Home from './screens/Home'
-import Home from './Screens/Home'
-import StackNav from './navigation/DrawerNav'
-import Icon from './components/Icon/Icon'
+import Home from './screens/Home'
+import { Icon, StackNav } from './components'
 
 const screens = [
   {

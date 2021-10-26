@@ -2,7 +2,7 @@ import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StyleSheet, TouchableOpacity } from 'react-native'
-import Icon from './Icon'
+import Icon from '../Icon/Icon'
 
 const FloatButton = (props) => {
   const { colors } = useTheme()

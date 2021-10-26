@@ -23,7 +23,7 @@ const TextButton = (props) => {
             fontWeight: props.fontWeight || 'bold',
           },
         ]}>
-        {props.text}
+        {props.title}
       </Text>
     </TouchableOpacity>
   )
@@ -35,7 +35,7 @@ TextButton.propTypes = {
   fontSize: PropTypes.number,
   color: PropTypes.string,
   fontWeight: PropTypes.string,
-  text: PropTypes.string,
+  title: PropTypes.string,
 }
 
 const styles = StyleSheet.create({

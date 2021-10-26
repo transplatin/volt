@@ -21,7 +21,7 @@ const Input = (props) => {
         },
         props.multiline && { height: 60 + 40 * props.numberOfLines },
       ]}>
-      {props.value && props.value.length > 0 ? (
+      {props.value && props.value.length > 0 && !props.hideLabel ? (
         <View
           style={[
             styles.label,
@@ -46,6 +46,8 @@ const Input = (props) => {
           {
             borderRadius: props.round || colors.round,
             borderColor: props.borderColor || colors.borderColor,
+            color: props.color || 'black',
+            backgroundColor: props.backgroundColor || 'transparent',
             fontSize: colors.fontSize,
           },
           Platform.OS === 'web' && { outlineColor: props.borderColor },
@@ -80,6 +82,9 @@ Input.propTypes = {
   width: PropTypes.string,
   numberOfLines: PropTypes.number,
   disable: PropTypes.bool,
+  color: PropTypes.string,
+  hideLabel: PropTypes.bool,
+  backgroundColor: PropTypes.string,
 }
 
 const styles = StyleSheet.create({
