@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import Theme from './Theme/Theme'
-// import Home from './screens/Home'
 import Home from './screens/Home'
 import { Icon, StackNav } from './components'
 

@@ -7,9 +7,11 @@ Button to place anywhere on the screen.
 | Name    | Type   | Default |
 | ------- | ------ | ------- |
 | color   | String |         |
-| sie     | Number |         |
+| size    | Number |         |
 | top     | Number |         |
 | bottom  | Number |         |
 | right   | Number |         |
 | left    | Number |         |
 | onPress | Func   |         |
+| name    | String |         |
+| family  | String |         |

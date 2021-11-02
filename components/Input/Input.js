@@ -89,7 +89,7 @@ Input.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
+    height: 50,
     width: '95%',
     marginTop: 20,
   },

@@ -1,8 +1,8 @@
-import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StyleSheet, TouchableOpacity } from 'react-native'
 import Icon from '../Icon/Icon'
+import { useTheme } from '@react-navigation/native'
 
 const FloatButton = (props) => {
   const { colors } = useTheme()
@@ -12,16 +12,24 @@ const FloatButton = (props) => {
       style={[
         styles.container,
         {
-          height: props.size ? props.size + 20 : 100,
-          width: props.size ? props.size + 20 : 100,
           backgroundColor: colors.primary,
-          top: props.top || 0,
-          bottom: props.bottom || 0,
-          left: props.left || 0,
-          right: props.right || 0,
+          width: props.size || 50,
+          height: props.size || 50,
+        },
+        {
+          position: 'absolute',
+          left: props.left,
+          right: props.right,
+          bottom: props.bottom,
+          top: props.top,
         },
       ]}>
-      <Icon name="add-circle" size={props.size || 80} />
+      <Icon
+        name={props.name}
+        family={props.family}
+        color={props.color}
+        size={props.size || 50}
+      />
     </TouchableOpacity>
   )
 }
@@ -29,6 +37,8 @@ const FloatButton = (props) => {
 FloatButton.propTypes = {
   color: PropTypes.string,
   size: PropTypes.number,
+  name: PropTypes.string,
+  family: PropTypes.family,
   top: PropTypes.number,
   bottom: PropTypes.number,
   left: PropTypes.number,
@@ -38,10 +48,8 @@ FloatButton.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 100,
+    justifyContent: 'center',
   },
 })
 

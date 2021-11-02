@@ -1,10 +1,10 @@
 const Theme = {
   dark: false,
   colors: {
-    round: 15,
+    round: 10,
     elevation: 10,
     fontSize: 14,
-    borderWidth: 1,
+    borderWidth: 2,
     margin: 25,
     headerFontSize: 20,
     borderColor: '#14a5ff',
@@ -13,7 +13,7 @@ const Theme = {
     success: '#31D0AA',
     warning: '#F0803C',
     background: '#fffaff',
-    // backgroundDark: '#193b68',
+    backgroundDark: '#193b68',
     text: '#fcfeff',
     textDisabled: '#666171',
   },
