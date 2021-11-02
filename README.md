@@ -10,10 +10,7 @@ Make sure you have expo cli installed in your machine
 $ npm install --global expo-cli 
 ```
 
-Volt Ui is available as NPM package.
-``` $ npm i @volt-ui/ ```
-
-**You can also clone the github repository and run** 
+**You can clone the github repository and run** 
 ```sh
 # Clone the repository
 git clone https://github.com/transplatin/volt.git
