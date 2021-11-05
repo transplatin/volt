@@ -3,6 +3,8 @@
 
 **Volt-UI is based on Expo and React Navigation. Read more about [Expo](https://docs.expo.dev/) and [react-navigation](https://reactnavigation.org/docs/getting-started/)**
 
+![logo](images/volt%20%281%29.png)
+
 ## Installation
 Make sure you have expo cli installed in your machine
 ```sh 
